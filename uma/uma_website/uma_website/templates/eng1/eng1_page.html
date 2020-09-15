@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+ {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gr.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+ {% endblock %}   
+
+<section class="deal-of-week set-bg spad" >
+ <div class="deal">
+
+ 	<br><h2 class="text-center" style="color:brown;font:simplifica;"><b>---------- List of Engineering Colleges- Phase I ----------</b></h2>
+
+ 	<br><table style="width:100%">
+  <tr>
+    <th><b>Sr.No</b></th>
+    <th>Name of institution</th> 
+    <th>District</th>
+    <th>Principal/Director/Vice-Chancellor</th>
+    <th>Phone Number</th>
+    <th>Email ID</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Government College of Engineering, Amravati</td>
+    <td>Amravati</td>
+    <td>Dr. RS Dalu</td>
+    <td>0721-2531929</td>
+    <td>principal@gcoea.ac.in</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Government College of Engineering, Aurangabad</td>
+    <td>Aurangabad</td>
+    <td>Dr. PB Murnal</td>
+    <td>0240-2366111</td>
+    <td>principalgeca@yahoo.com</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Government College of Engineering, Chandrapur</td>
+    <td>Chandrapur</td>
+    <td>Dr. GN Kulkarni</td>
+    <td>07172-230478</td>
+    <td>principal@gcoec.ac.in</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Government College of Engineering, Karad</td>
+    <td>Satara</td>
+    <td>Dr.  P M Khodake</td>
+    <td>9370157387</td>
+    <td>principal@gcekarad.ac.in</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Government College of Engineering, Jalgaon</td>
+    <td>Jalgaon</td>
+    <td>Dr. R.P.Borkar</td>
+    <td>8007378756</td>
+    <td>princoej@rediffmail.com</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>University Institute  of Chemical Technology, North Maharashtra University, Jalgaon  </td>
+    <td>Jalgaon</td>
+    <td>Dr. Satyendra Mishra</td>
+    <td>9423488467</td>
+    <td>smishra@nmu.ac.in/td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai</td>
+    <td>Mumbai city</td>
+    <td>Dr. Dhiren Patel</td>
+    <td>022-24198101</td>
+    <td>directorvjti@vjti.org.in</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Institute of Chemical Technology, Matunga, Mumbai</td>
+    <td>Mumbai city</td>
+    <td>Prof. G.D. Yadav</td>
+    <td>9833090510</td>
+    <td>gd.yadav@ictmumbai.edu.in</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Sardar Patel College of Engineering, Andheri</td>
+    <td>Mumbai suburban</td>
+    <td>Dr. Priyadarshi H. Sawant</td>
+    <td>9322213065</td>
+    <td>phsawant@hotmail.com</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>College of Engineering, Pune</td>
+    <td>Pune</td>
+    <td>Dr. B. B. Ahuja</td>
+    <td>9423582028</td>
+    <td>director@coep.ac.in</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Bharati Vidyapeeth Deemed University, College of Engineering</td>
+    <td>Pune</td>
+    <td>Prof. Anand Bhalerao</td>
+    <td>9881731235</td>
+    <td>arbhalerao@bvucoep.edu.in</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>K. E. Society's Rajarambapu Institute of Technology, Walwa, Sangli</td>
+    <td>Sangli</td>
+    <td>Dr. Mrs. S. S. Kulkarni</td>
+    <td>9970700701</td>
+    <td>sushma.kulkarni@ritindia.edu</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Walchand College of Engineering, Sangli</td>
+    <td>Sangli</td>
+    <td>Dr. G. V. Parishwad</td>
+    <td>9822871801</td>
+    <td>director@walchandsangli.ac.in</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>G.H.Raisoni Academy of Engineering & Technology, Nagpur</td>
+    <td>Nagpur</td>
+    <td>Dr.Preeti Bajaj</td>
+    <td>9822220369</td>
+    <td>principal.ghrce@raisoni.net</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Visvesvaraya National Institute of Technology, Nagpur</td>
+    <td>Nagpur</td>
+    <td>Dr. Narendra S. Chaudhari</td>
+    <td>712- 2222828, 2224123, 2231636, 2226750, 2223710, 2236330, 2236331, 2236332</td>
+    <td>director@vnit.ac.in</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Shri Guru Gobind Singhji Institute of Engineering and Technology, Nanded</td>
+    <td>Nanded</td>
+    <td>Dr. L. M. Waghmare</td>
+    <td>9822663185</td>
+    <td>lmwaghmare@yahoo.com</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>Dr. Babasaheb Ambedkar Technological University, Lonere</td>
+    <td>Raigad</td>
+    <td>Dr. V.G. Gaikar</td>
+    <td>02140 - 275081, 275212 </td>
+    <td>vc@dbatu.ac.in</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>Department of Technology, Shivaji University, Kolhapur</td>
+    <td>Kolhapur</td>
+    <td>Dr.J.S.Bagi</td>
+    <td>9850441874</td>
+    <td>vc@dbatu.ac.in</td>
+  </tr>
+
+</table>
+
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+
+{% block content %}
+    {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gr.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+    <style>
+    	.h2 {
+    		color : #000000;
+    	}
+
+      .center {
+        text-align: left;
+          /*border: 3px solid green;*/
+     }
+
+    </style>
+    {% endblock %}
+
+<section class="deal-of-week set-bg spad" >
+<div class="deal">
+
+
+<h3 style="text-align: center; padding-bottom: 0%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; color: #85144b;">{{ self.subtitle }}</b></h3><br>
+
+
+
+  <div class="center" style="background-color:#aaa;">
+    <h2>UMA Application Documents</h2><br>
+    <p>1. A covering letter- This should be a short, personalised write-up explaining the motivation
+and rationale behind participating in the UMA mechanism, both from an institutional and
+societal perspective. It should also lay down the objectives and goalposts that the institution
+aims to achieve and the course of action that needs to be charted to achieve them. This will
+vary from institution to institution, but should broadly reflect the spirit of UMA. The
+Government Resolutions of 13th January 2016 and 15th June 2016 should help institutions in
+drafting this letter. A sample covering letter is available for reference on the UMA website.<br>
+<br>2. A participation criteria sheet- This is a formatted excel spreadsheet that needs to be filled
+and attached to the covering letter. The spreadsheet will help in judging the interest and
+capability of the institution to perform UMA activities. A blank formatted participation
+criteria sheet is available on the UMA website. A sample participation criteria sheet is also
+available for reference.
+Please remember that the participation criteria sheet forms the crux of the UMA application
+and should be used to build a strong case. In order to build a strong case, institutions need to
+prove that they have prior experience working in the development sector, interacting with
+other technical institutions, industries and government agencies, and possess the requisite
+infrastructure and faculty expertise.</p>
+  </div>
+  
+
+  <!-- <div class="column" style="background-color:#bbb;">
+    <h2>Three Stage Empanelment Process and Timeline</h2><br>
+    
+    <h5>Following a meeting of select private engineering colleges on 28 th December 2016,
+applications for UMA empanelment were received from 18 colleges. The process followed is
+as follows-</h5><br>
+
+    <p>1. Stage I: 23rd to 29th Jan - The UMA Review Committee (Mr. Raj Desai, Mr. Yatin
+Diwakar and Ms. Oshin Dharap) scrutinized and scored the 18 applications received based on
+parameters such as experience in the development sector, experience in executing projects of
+inter-disciplinary nature, fieldwork and reporting, availability of seed funding to start T&amp;DC,
+willingness to commit faculty time, etc. A cut-off score was decided upon and 14 colleges
+were shortlisted.<br>
+<br>2. Stage II: 8th Feb to 13th Mar- The UMA team consisting of Mr. Raj Desai and Ms.
+Oshin Dharap visited 14 applicant colleges to assess their technical capabilities to conduct
+UMA activities (in terms of work done in the development sector as well as existing
+infrastructural facilities) and review supporting documents (project reports, agreements,
+MoUs, certificates, etc.). Each college was requested to send contact details of key
+professors who have done UMA related work as well as a brief presentation containing the
+synopsis/abstract and pictures of 6-7 key projects which were found relevant by the UMA
+team. The UMA team prepared a UMA summary visit report for each college.<br>
+<br>3. Stage III: 24 th May- The UMA Advisory Committee held its second meeting on 24 th May
+2017. The 14 college presentations and summary visit reports were put before the UMA
+Advisory Committee for approval. Based on this, the UMA Advisory Committee decided to
+approve the 12 recommended institutions for empanelment. Subsequent to this, a new GR
+enlisting the empaneled colleges and empowering them to participate in UMA projects and
+activities was released on 5 th July.<br></p>
+  </div> -->
+</div> 
+</section>
+
+   <div class="faq-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="faq-accordin">
+                        <div class="accordion" id="accordionExample">
+                            <h3>Click and apply</h3><br>
+                            
+                            {% for block in page.content %}
+                                {% include_block block %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                        
+
+
+    {% block extra_js %}
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      
+    {% endblock %}
+ 
+
+   
+
+
+
+    <!-- <section class="deal-of-week set-bg spad" >
+  <div class="deal">
+    <div class="row mt-5">
+
+          <div class="col-md-4">
+       
+              <div class="section-title">
+                  <h2>Main GR</h2>
+                  <div class="justify-content">
+                
+                 <p> Reform teaching, Curricula and Research <br> Train future development professionals <br> Make institutions regional resources <br> Provide mechanism for citizens to approach institutions <br> Create academic space for projects </p>
+          
+                  </div>
+              </div>
+            </div>
+   
+
+ {% endblock %}   
+
+
+

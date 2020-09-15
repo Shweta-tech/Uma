@@ -1,0 +1,399 @@
+ {% extends "base.html" %} {% load static %} {% block content %} {% load wagtailcore_tags %} {% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about-us.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+<style>
+    .mystyle {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .card
+  {
+    border-style: solid;
+    border-color: #0000A0;
+    /*background-color:#D8E9FA;
+    
+    margin-left: 500px;
+    margin-right: 400px;*/
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.one_fourth {
+  position: absolute;
+  right: 80px;
+  width: 800px;
+  /*border: 3px solid #73AD21;*/
+  padding: 10px;
+  margin-right: auto;
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+</style>
+{% endblock %}
+
+<body id="top">
+
+
+    <!-- ################################################################################################ -->
+    <div class="wrapper bgded overlay" style="background-image:url('{% static 'img/about-us/faculty.JPG' %}')">
+        <!-- <section class="hoc container clear">  -->
+
+
+        <!-- <ul class="nospace group">
+        <li class="one_quarter first">
+         
+        </li>
+        <li class="one_quarter">
+          
+        </li>
+        <li class="one_quarter">
+          
+        </li>
+        <li class="one_quarter">
+         
+        </li>
+      </ul> -->
+        <!-- ################################################################################################ -->
+        <!-- </section> -->
+
+        <div id="pageintro" class="hoc clear">
+            <!-- ################################################################################################ -->
+
+            <h3 class="heading text-light">Unnat Maharashtra Abhiyan</h3>
+            <!-- <h3 class="text-light"><b>तकनीकी संस्थाओं का ज्ञान - स्वैच्छिक संगठनों का अनुभव - सरकार के संसाधन
+          सभी को मिलाकर गांवों के विकास के लिए</b></h3> -->
+            <h4 class="text-light"><b>Connecting Higher and Technical Education with Development Sector</b></h4>
+
+
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+
+    <br><h2 class="text-center" style="color:brown;font:simplifica;"><b>------------ Vision Mission & Objectives ------------</b></h2>
+
+    <!-- <div class="wrapper row3"> -->
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="sectiontitle">
+
+            </div>
+            <!-- <ul class="nospace group services"> -->
+                <li class="one_half first">
+
+                    <h6 class="heading"><b>Vision </b></h6>
+                    <p><b>  Its vision is to build an independent and public knowledge infrastructure for the state of Maharashtra which will bring socio-economic and cultural development for its people, <!-- <span id="dots">...</span> -->
+            <!-- <span id="more">  -->especially those in the bottom 80% of the socio-economic strata. <!-- </span></b> --></p>
+                    <!-- <footer><a class="btn" onclick="myfunction()" id="myBtn"><b>Read More</b></a></footer> -->
+
+                <!-- </li>
+                <li class="one_fourth"> -->
+
+                    <h6 class="heading"><b>Mission </b></h6>
+                    <p><b>Its mission is to- <br><br> (i) enable demand-driven research: enable citizens, elected representatives, and state agencies to access institutions of learning (i.e., institutions of higher education, IHEs)  and  <!-- <span id="dots1">...</span> -->
+            <!-- <span id="more1"> --> for topical research such as in feasibility studies, evaluation, assessment, or innovative design. <br><br> (ii) align with development: to align curricula and research in higher education towards better development outcomes and to train students for a future role as development professionals and researchers.<!-- </span></b></p> -->
+                   <!--  <footer><a class="btn" onclick="myfunction1()" id="myBtn1"><b>Read More</b></a></footer> -->
+
+
+                </li>
+                <div class ="one_fourth">
+                <!-- <li class="one_fourth" align="left"> -->
+
+                    <h6 class="heading"><b>Objectives </b></h6>
+                    <p><b>Its objectives include- <br><br> (i) To align curricula and research with regional development needs, train students for a future role as development professionals and researchers and strengthen their capabilities in real-life problem areas.<br><br> (ii) To re-emphasize field-work and case-studies as an important pedagogical tool within research and academia.<br><!-- <span id="dots2">...</span> -->
+            <!-- <span id="more2"> --> <br> (iii) To create avenues for students and faculty members to work on live problems. <br><br> (iv) To provide a formal mechanism for local bodies (such as Zilla Parishads, Gram Panchayats, etc.) and the public at large to access institutes of higher education for their knowledge needs. <br><br>
+            </div>
+            
+  
+           <!--  </span></b></p>
+                    <footer><a class="btn" onclick="myfunction2()" id="myBtn2"><b>Read More</b></a></footer> -->
+
+                <!-- </li> -->
+           <!--  </ul> -->
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    <!-- </div> -->
+    <!-- ################################################################################################ -->
+    <!-- {{ self.subtitle}} -->
+    <!-- End Top Background Image Wrapper -->
+    <div class="wrapper row3">
+        <section class="hoc container clear" id="test">
+            <!-- main body -->
+            <div class="sectiontitle">
+                <br><h2 class="text-center" style="color:brown;font:simplifica;"><b>------------ UMA Structure ------------</b></h2>
+
+            </div>
+            <div class="group">
+                <!-- <div class="one_half first" height="400" width="400"> -->
+
+                    <!-- <div class="mystyle">
+                        <b><p> {{ self.uma_structure|richtext }} </p></b>
+                    </div>
+                </div> -->
+               <!--  <div class="one_half"><img class="inspace-10 borderedbox" src="{% static 'img/about-us/structure.png' %}" alt="" class="center" height="400px" width="400px"></div> -->
+
+            <img src="{% static 'img/about-us/structure.png' %}" alt="" class="center">
+        </div>
+     </section>
+    </div><br>
+
+
+    <br><h2 class="text-center" style="color:brown;font:simplifica;"><b>------------ Key People ------------</b></h2>
+
+<br><br>
+<h2 style="text-align:center;"><b> UMA Advisory Committee <b></h2><br>
+      
+
+<div class="row" style="text-align:center">
+  <div class="col-sm-6">
+    <div class="card" margin-left: 150px;> 
+      <div class="card-body">
+        <h5 class="card-title"><b> Prof. Milind Sohoni </b></h5>
+    <p class="card-text"><b>Professor, CSE and CTARA <br> Chairperson, UMA Advisory Committee <br> sohoni@cse.iitb.ac.in </b></p>
+
+    </div>
+    </div>
+    </div>
+
+
+    <div class="col-sm-6" style="text-align:center;">
+        <div class="card" margin-left: 150px;>
+            <div class="card-body">
+                <h5 class="card-title"><b> Dr. Abhay Wagh </b></h5>
+                <p class="card-text"><b>Director, DTE <br> Member Secretary, UMA Advisory Committee <br> director@dtemaharashtra.gov.in </b></p>
+
+            </div>
+        </div>
+    </div>
+    </div><br>
+
+
+
+    <br>
+    <h2 style="text-align:center;"><b> Program Coordination Unit <b></h2><br><br>   
+
+
+
+<div class="row" style="text-align:center">
+  <div class="col-sm-6" >
+   <div class="card"> 
+     <div class="card-body">
+
+
+
+
+      <h2 style="text-align:center;"><b> UMA Program Cell at IITB </b></h2><br>
+
+
+    <br><div class="card w-70" style="text-align:center">
+        <div class="card-body">
+            <h5 class="card-title"><b> Mr. Rajaram Desai </b></h5>
+            <p class="card-text"><b>Senior Project Manager <br> UMA Cell <br> rajdesai01@yahoo.com </b></p>
+
+        </div>
+    </div><br>
+
+    <br><div class="card w-70" style="text-align:center">
+        <div class="card-body">
+            <h5 class="card-title"><b> Ms. Oshin Dharap </b></h5>
+            <p class="card-text"><b>Junior Project Manager <br> UMA Cell <br> oshindharap@gmail.com </b></p>
+
+        </div><br>
+    </div><br>
+
+    <!-- <div class="card w-70" style="text-align:center">
+        <div class="card-body">
+            <h5 class="card-title"><b> Animesh Nautiyal </b></h5>
+            <p class="card-text"><b> UMA Cell <br> nautiyalanimesh@gmail.com </b></p>
+
+        </div>
+    </div><br>
+
+    <div class="card w-70" style="text-align:center">
+        <div class="card-body">
+            <h5 class="card-title"><b> Annupriya Singh </b></h5>
+            <p class="card-text"><b> Intern <br> UMA Cell <br> anupriya2215@gmail.com </b></p>
+
+        </div>
+    </div><br>
+
+    <div class="card w-70" style="text-align:center">
+        <div class="card-body">
+            <h5 class="card-title"><b> Tanishq Dayma </b></h5>
+            <p class="card-text"><b> Intern <br> UMA Cell <br> tanishqdayma@gmail.com  </b></p>
+
+        </div>
+    </div> -->
+    </div>
+    </div>
+    </div><br><br>
+
+
+    <div class="col-sm-6" style="text-align:center;">
+        <div class="card">
+            <div class="card-body">
+
+
+
+                <h2 style="text-align:center;"><b> PCU at DTE </b></h2><br>
+
+                <div class="card w-70" style="text-align:center">
+                    <div class="card-body">
+
+
+                        <h5 class="card-title"><b> Dr. Suresh Yavalkar </b></h5>
+                        <p class="card-text"><b>Joint Director, DTE <br> Nodal Officer for UMA <br> PCU at DTE <br> spyavalkar@dtemaharashtra.gov.in </b></p>
+
+                    </div>
+                </div><br>
+
+                <div class="card w-70" style="text-align:center">
+                    <div class="card-body">
+                        <h5 class="card-title"><b> Mr. Sumit Vengurlekar </b></h5>
+                        <p class="card-text"><b>Project Administrative Assistant <br> PCU at DTE <br> sum.vengu03@gmail.com <b></p>
+    
+  </div>
+</div>
+</div><br><br>
+
+  </div>
+    </div>
+  </div><br><br> 
+
+            <!-- ################################################################################################ -->
+            <!--  <div class="sectiontitle">
+          <h6 class="heading">History</h6>
+          
+        </div>
+        <div class="group">
+          <div class="one_half" style="margin-right: 20px;"><img class="inspace-10 borderedbox" src="{% static 'img/about-us/history.JPG' %}" alt=""></div>
+           <div class="one_half first">
+            
+             <div class="mystyle">
+            <b><p>{{ self.history|richtext }}</p></b>
+            </div>
+            
+          </div>
+         
+        
+        
+        </div>
+          </div> -->
+            <!-- ################################################################################################ -->
+
+    </div><br>
+
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- <br><div class="wrapper bgded" style="background-image:url('{% static 'img/about-us/image.JPG' %}')">
+    <div class="hoc split clear">
+      <section> 
+       
+        <h2 class="heading"><b>How You Can Participate in UMA?</b></h2>
+        <p>{{ self.participate|richtext }}</p>
+        <ul class="fa-ul">
+         
+          {% for myblock in page.participate_points %}
+              {% include_block myblock %}          
+          {% endfor %}
+         
+        </ul>
+        <p class="btmspace-30"><b>For more information in this regard, you may please visit the UBA website and contact National Coordinator or Regional Coordinators (Mentoring Institutions).</b></p>
+        
+       
+      </section>
+    </div>
+  </div> -->
+    <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+
+    <script>
+        function myfunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+
+            }
+        }
+    </script>
+
+    <script>
+        function myfunction1() {
+            var dots = document.getElementById("dots1");
+            var moreText = document.getElementById("more1");
+            var btnText = document.getElementById("myBtn1");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+
+            }
+        }
+    </script>
+
+    <script>
+        function myfunction2() {
+            var dots = document.getElementById("dots2");
+            var moreText = document.getElementById("more2");
+            var btnText = document.getElementById("myBtn2");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+
+            }
+        }
+    </script>
+    {% block extra_js %}
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     -->
+    <!-- JAVASCRIPTS -->
+    <!-- <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.backtotop.js' %}"></script>
+    <script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+    <script src="{% static 'https://cdnjsjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' %}"></script>
+    <script src="{% static 'js/my.js' %}"></script> -->
+
+
+    {% endblock %} {% endblock %}
+</body>

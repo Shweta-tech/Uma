@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+ {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gr.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+ {% endblock %}   
+
+
+<section class="deal-of-week set-bg spad" >
+ <div class="deal">
+
+<h1 text-align="center">Techno-Economic Assessment of Micro, Small and Medium Enterprises (MSMEs) in Rural Areas</h1><br>
+
+<h3 text-align="center">Project Description</h3>
+
+<p> This training program was designed by Unnat Maharashtra Abhiyan (UMA) Program Cell and Centre for Technology Alternatives for Rural Areas (CTARA) to edifice and engage faculty members and students of UMA affiliated engineering colleges in evaluating the technological and economic health of MSMEs in rural areas. The core objective of this program is to train faculty and students to become effective resource personnel in the MSME sector by building their capacities in the systematic evaluation of rural MSMEs.
+.</p>
+
+<h3 text-align="center">Principal Investigator</h3>
+
+<p>DTE, Government of Maharashtra and CTARA, IIT Bombay</p>
+
+<h3 text-align="center">Team</h3>
+
+<p>A] Lead Faculty Coordinator <br><br>Prof. Vishal Sardeshpande, CTARA<br>
+<br>B] UMA Team <br>
+<br>Mr. Rajaram Desai, UMA Program Cell Lead, CTARA <br>
+<br>Ms. Oshin Dharap, UMA Program Cell, CTARA <br>
+<br>C] DTE Representative <br>
+<br>Mr. B.B. Kulkarni, Mumbai Regional Office<br>
+<br>D] Resource Persons <br>
+<br>Mr. Vinayak Dubey, TDSC, CTARA <br>
+<br>Ms. Alakhya Deshmukh, TDSC, CTARA <br>
+
+<br>E] Coordination <br>
+<br>Prof. Pramod Joshi, Principal, GIT <br>
+<br>Prof. Snehal Gujarathi, UMA Coordinator, GIT <br> </p>
+
+<h3 text-align="center">Project Photo</h3><br>
+
+<h5 text-align="center">First Training Workshop</h5><br>
+
+<img src="{% static 'img/msme.JPG' %}" alt="" style="width:30%;">
+
+<h3 text-align="center">Project Deliverables</h3><br>
+
+
+<br><h3 text-align="center">Project Documents</h3>
+<p>Assignment document </p>
+
+
+<h3 text-align="center">Project Outputs</h3>
+  
+  <p>First Workshop - Unnat Maharashtra Abhiyan (UMA) Program Cell and Centre for Technology Alternatives for Rural Areas (CTARA) conducted the first training workshop at GIT Ratnagiri, Feb 17-18, 2020. The workshop was attended by a total of 44 participants/trainees from 12 engineering colleges from across Maharashtra , including 24 faculty members and 20 students. The participant cohort consisted of faculty and students from various engineering fields (Mechanical, Civil, Electrical, etc.) and economics, making it a diverse group, and thus propitious for analyzing the different aspects of the MSME sector. The workshop was conducted by Prof. Vishal Sardeshpande from CTARA.
+  </p>
+
+<!--  <h3 text-align="center">Programme Agenda <a href="https://www.iitb.ac.in/ctara/en/system/files/Programme%20Agenda.pdf#overlay-context=user">link</a></h3><br>
+
+ <img src="{% static 'img/msmeagenda/1.png' %}" alt="" style="width:40%"><br>
+ <img src="{% static 'img/msmeagenda/2.png' %}" alt="" style="width:40%"><br>
+ -->
+
+
+  <div class="faq-section spad">
+             <div class="faq-accordin">
+                     <div class="accordion" id="accordionExample">
+                            <h3>Program Agenda</h3><br>
+                            
+                            {% for block in page.content %}
+                                {% include_block block %}
+                            {% endfor %}
+                     </div>
+             </div>
+   </div>  
+
+
+ <br><h3 text-align="center">Participant list  <a href="https://www.iitb.ac.in/ctara/en/system/files/Participants%20List.pdf#overlay-context=user">link</a></h3><br>
+
+<!--  <img src="{% static 'img/msmeagenda/3.png' %}" alt="" style="width:40%, height:60%">
+ <img src="{% static 'img/msmeagenda/4.png' %}" alt="" style="width:40%"><br> -->
+
+ <br><h3 text-align="center">Training Report <a href="https://www.iitb.ac.in/ctara/en/system/files/Training%20Report.pdf#overlay-context=en/uma_rws_audit_training">link</a></h3><br>
+
+ <h5><a href="https://drive.google.com/open?id=1oBlzACH6ysPHxOx8-M8jGi33X916O9W316JKLhTqf-E">https://drive.google.com/open?id=1oBlzACH6ysPHxOx8-M8jGi33X916O9W316JKLhTqf-E
+</a></h5>
+
+<br><h3 text-align="center">Workshop Session <a href="https://www.dropbox.com/sh/6ngfc1nb0nu03ou/AACc2tozr1XDPGR0gMV5k9v7a?dl=0">link</a></h3>
+
+</div>
+</section>
+
+
+    {% block extra_js %}
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    {% endblock %} 
+
+{% endblock %}

@@ -1,0 +1,566 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+
+{% block title %}
+Unnat Maharashtra Abhiyan
+{% endblock %}
+
+{% block title_suffix %}
+Unnat Maharashtra Abhiyan
+{% endblock %}
+{% block content %}
+
+{% block extra_css %}
+<!-- <link rel="stylesheet" href="{% static 'css/footer_style.css' %}"> -->
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" type="text/css">
+<!-- <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css"> -->
+<link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+<!-- <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css"> -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/load-more-button.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+<link href="{% static 'owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'animate.css/animate.min.css' %}" rel="stylesheet">
+<link href="{% static 'animate.css/animate.compat.css' %}" rel="stylesheet">
+<link href="{% static 'animate.css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'venobox/venobox.css' %}" rel="stylesheet">
+<link href="{% static 'aos/aos.css' %}" rel="stylesheet">
+
+<style>
+  #html5-watermark {
+      display:none !important;
+   }
+   #mapid{
+     width: 100%;
+     height: 500px;
+     margin-bottom:50px;
+   }
+
+   .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+  .info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.greendot {
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.reddot {
+  height: 20px;
+  width: 20px;
+  background-color:red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dottext{
+  height: 30px;
+  text-align: center;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(4, 12, 21, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+
+#hero .carousel, #hero .carousel-inner, #hero .carousel-item, #hero .carousel-item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-item {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#hero .carousel-item::before {
+  content: '';
+  background-color: rgba(4, 12, 21, 0.5);
+}
+
+#hero .carousel-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 82px;
+  left: 50px;
+  right: 50px;
+}
+
+#hero h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#hero p {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  color: #fff;
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  #hero p {
+    width: 50%;
+  }
+}
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-left,
+#hero .carousel-inner .active.carousel-item-right {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-left,
+#hero .carousel-inner .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-left,
+#hero .carousel-inner .active.carousel-item-right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-prev, #hero .carousel-control-next {
+  width: 10%;
+  top: 112px;
+}
+
+@media (max-width: 992px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    top: 66px;
+  }
+}
+
+#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 36px;
+  line-height: 1;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 10px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#hero .carousel-control-next-icon:hover, #hero .carousel-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hero .carousel-indicators li {
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  opacity: .6;
+  transition: 0.3s;
+}
+
+#hero .carousel-indicators li.active {
+  opacity: 1;
+  background: #ed502e;
+}
+
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  line-height: 1;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  background: #ed502e;
+  margin-top: 15px;
+}
+
+#hero .btn-get-started:hover {
+  background: #ef6445;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    height: 100vh;
+  }
+  #hero .carousel-container {
+    text-align: center;
+    top: 74px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 120vh;
+  }
+}
+
+.vbox-animated{
+    webkit-transition: margin 300ms ease-out;
+    transition: margin 300ms ease-out;
+}
+
+
+  </style>
+
+  
+{% endblock %}
+
+<!-- <div id="preloder">
+  <div class="loader"></div>
+</div> -->
+
+    
+
+<!-- carousel Section Begin -->
+
+<section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/img/aiei.JPG)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Unnat Maharashtra Abhiyan</span></h2>
+              <p class="animate__animated animate__fadeInUp">Unnat Maharashtra Abhiyan (UMA) is an institutional framework conceptualized and operated jointly by CTARA, IIT Bombay and Government of Maharashtra, India. It envisages the creation of a network of trusted higher education institutions in the state to support its development agenda. It is currently being rolled out in engineering colleges and polytechnics across the state of Maharashtra through a set of enabling Government Resolutions (GRs)</p>
+              <a href="{% slugurl 'home' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(static/img/image.JPG)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">About UMA</h2>
+              <p class="animate__animated animate__fadeInUp">UMA seeks to build an independent knowledge infrastructure in the public domain for the state of Maharashtra which will bring socio-economic and cultural development for its people, especially those in the bottom 80% of the socio-economic strata.</p>
+              <a href="{% slugurl 'about-us' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(static/img/msme.JPG)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Workshops and Events</h2>
+              <p class="animate__animated animate__fadeInUp">Workshops are regularly organised on various themes. The theme for 2019-2020 was electricity and micro, small and medium enterprises. These workshops develop expertise for UMA institutions in new areas and also produce resource material which may be used in course-work.</p>
+              <a href="{% slugurl 'uma-workshops' %}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+
+
+
+
+
+
+<!-- 
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    {% for itr in self.carousel_images.all %}
+    {% image itr.carousel_image fill-1100x400 as c_img %}
+    <div class="carousel-item {% if forloop.counter == 1%}active{% endif %}">
+      <img height = "600px" class="d-block w-100" src="{{ c_img.url }}" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ itr.carousel_image_title }}</h5>
+        <p>{{ itr.carousel_image_information|richtext }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
+<!-- carousel Section End -->
+ <!-- vision and mission / important Link -->
+<section class="deal-of-week set-bg spad" >
+  <div class="deal">
+    <div class="row mt-5">
+
+      <div class="col-md-4">
+       
+              <div class="section-title">
+                  <h2>TDSC</h2>
+                  <div class="justify-content">
+                  <!-- <p>{{ self.tdsc }}</p> -->
+
+                  <p> Technology and Development Solutions Cell is a resource center for providing technology-based solutions for the development sector.
+                    It provides resources and services to undertake projects that deliver outputs via academic research outputs, consulting, outreach modules, entrepreneurship guidance, etc. <br> TDSC not only aims at delivering solutions to external stakeholders but primarily uses the academic platform to engage students directly in development-related problems and solutions.<br> The resources of the center can be leveraged by faculty and students of IIT Bombay and other colleges to provide solutions to the community and various development stakeholders. <br></p>
+          
+                  </div>
+              </div>
+            </div>
+
+          <div class="col-md-4">
+       
+              <div class="section-title">
+                  <h2>UMA</h2>
+                  <div class="justify-content">
+                 <!--  <p>{{ self.vision_and_mission }}</p> -->
+                 <p> Unnat Maharashtra Abhiyan (UMA) is a project of the Department of Higher and Technical Education, Government of Maharashtra.Unnat Maharashtra Abhiyan (UMA) is an institutional framework conceptualized and operated jointly by CTARA, IIT Bombay and Government of Maharashtra, India. It envisages the creation of a network of trusted higher education institutions in the state to support its development agenda. It is currently being rolled out in engineering colleges and polytechnics across the state of Maharashtra through a set of enabling Government Resolutions (GRs)</p> 
+
+                  <!--  <br> Train future development professionals <br> Make institutions regional resources <br> Provide mechanism for citizens to approach institutions <br> Create academic space for projects </p> -->
+          
+                  </div>
+              </div>
+            </div>
+   
+
+<div class="col-md-4" id="importantlinks">
+          <div class="section-title">
+            <h2>Important Links</h2>
+            <div id="marqueecontainer">
+              <div id="vmarquee">
+                <marquee direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="5" height='300px' style="padding-top:20px;">
+                <p>{{ self.important_links|richtext }}</p>
+              </marquee>
+              </div>
+            </div>
+         </div>
+       </div>
+              
+               
+            
+           
+        </div>
+      </div>
+   </section>
+ <!-- vision and link section end -->
+
+<!-- workshop/event -->
+<!-- <section class="latest-blog spad" id="workshopsandevents">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="section-title">
+              <h2>Workshops and Events</h2>
+          </div>
+      </div>
+  </div>
+  <div class="interior container clearfix">
+ 
+      {{ self.workshop_and_events }}
+
+    
+  </div>
+</section> -->
+
+<!-- workshop/event -->
+<div id="pimap">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="section-title">
+              <h2>Participating Institutes</h2>
+          </div>
+      </div>
+  </div>
+  <div id = 'mapid'>   
+  </div>
+</div>
+
+<!-- Media gallery Begin -->
+<section class="man-banner spad">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12" >
+            <div class="section-title">
+                    <h2>Media Gallery</h2>
+            </div>
+          </div>
+      </div> 
+          <div class="product-slider owl-carousel">
+              <div class="item"><a href="{% static 'img/JSA/1.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/1.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/2.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/2.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/3.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/4.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/5.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/6.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/7.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/8.JPG' %}"></a></div>
+              <div class="item"><a href="{% static 'img/JSA/3.jpg' %}" class="html5lightbox" ><img class="img-fluid" src="{% static 'img/JSA/9.JPG' %}"></a></div>
+              <div class="item"><a href="https://www.youtube.com/watch?v=fc5WsQBJqcs&t=1429s" class="html5lightbox" data-width="480" data-height="320" title="Big Buck Bunny"><img class="img-fluid" src="{% static 'img/JSA/10.JPG' %}"></a></div>
+
+              {{ self.media_gallery }}
+
+           </div>
+   </div>
+</section>
+
+<section class="spad" >
+  <div class="featured_candidates_area">
+      <div class="container" id="contact">
+           <div class="row">
+             <div class="col-lg-12" >
+                  <div class="filter-control">
+                    <div class="section-title">
+                            <h2>Contact</h2>
+                    </div>
+                  </div>
+                  <div class="container-fluid">
+                  <div class="row">
+                        <div style="width: 50%; float:left">
+                      <div class="single_candidates text-center">
+                          <div class="thumb">
+                              <img src="{% static 'img/8.png' %}" alt="">
+                          </div>
+                          <h4>PCU at DTE</h4><br>
+                          <p> 
+                            <b> Dr. Suresh Yavalkar </b> <br> Joint Director, DTE <br> Nodal Officer for UMA <br> spyavalkar@dtemaharashtra.gov.in <br>
+                            <br> <b> Mr. Sumit Vengurlekar </b> <br> Project Administrative Assistant <br> PCU at DTE <br> sum.vengu03@gmail.com 
+
+                            <!-- Chemical Engineer,Program Manager IDC TDSC<br>Consultant Unnat Maharashtra Abhiyan<br>
+                            rajdesai01@yahoo.com <br>
+                            9004580722 --></p>
+                      </div>
+                    </div>
+                    <div style="width: 50%; float:left">
+                      <div class="single_candidates text-center">
+                          <div class="thumb">
+                              <img src="{% static 'img/10.jpg' %}" alt="">
+                          </div>
+                          <!-- <a href="https://www.cse.iitb.ac.in/~sohoni/"> --><h4>Program Cell at IIT-B</h4></a><br>
+                          <p>
+                            <b> Mr. Rajaram Desai </b> <br> Senior Project Manager <br> UMA Cell <br> rajdesai01@yahoo.com <br>
+                            <b> <br> Ms. Oshin Dharap </b> <br> Junior Project Manager <br> UMA Cell <br> oshindharap@gmail.com
+
+                           <!--  Professor, CSE and CTARA<br>
+                            Chairperson, UMA Advisory Committee<br>
+                            sohoni@cse.iitb.ac.in<br>
+                            022 2576 7729 --></p>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+                  <!-- </section> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+  
+
+{% block extra_js %}
+ <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.zoom.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <!-- <script src="{% static 'js/owl.carousel.min.js' %}"></script> -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/load-more-button.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/html5lightbox.js' %}"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script type="text/javascript" src="{% static 'js/leaflet-ajax.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/pi_map.js' %}"></script>
+    <script src="{% static 'owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'aos/aos.js' %}"></script>
+
+    {% endblock %}
+
+{% endblock %}

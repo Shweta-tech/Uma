@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+  <!-- <div>
+      {{ self.subtitle }}
+  </div> -->
+
+  <section id="services">
+   <br><div class="container">
+     <div class="section-header">
+      
+                 <h2>{{ self.heading }}</h2>
+                  <p>{{ self.description }}</p>
+      </div>
+      <div class="row">
+                  
+                     {% for block in page.content %}
+                        {% include_block block %}
+                     {% endfor %}
+                     </div>
+       </div>           
+   </section>
+{% endblock %}
+
+     
+       
+     
+      
+      
+    
+
+     
+

@@ -1,0 +1,384 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+ {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gr.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+ {% endblock %}   
+
+<section class="deal-of-week set-bg spad" >
+ <div class="deal">
+
+    <br><h2 class="text-center" style="color:brown;font:simplifica;"><b>---------- Government Polytechnic ----------</b></h2>
+
+    <br><table style="width:100%">
+  <tr>
+    <th><b>Sr.No</b></th>
+    <th>DTE Code</th> 
+    <th>Name of Principal</th>
+    <th>Name of the Institute</th>
+    <th>Email ID</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>Amravati</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1006</td>
+    <td>DR.ARUN AMBADAS GULHANE</td>
+    <td>Government Polytechnic, Murtijapur</td>
+    <td>principal.gpmurtijapur@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1008</td>
+    <td>DR.RAJENDRA PANDURANG MOGRE</td>
+    <td>Government Polytechnic, Amravati</td>
+    <td>principal.gpamravati@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>1009</td>
+    <td>DR.SAMEER SHRINIVAS PRABHUNE</td>
+    <td>Government Polytechnic, Khamgaon</td>
+    <td>principal.gpkhamgaon@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>4</td>
+    <td>1010</td>
+    <td>DR. VIJAY RANGRAOJI MANKAR</td>
+    <td>Government Polytechnic, Washim</td>
+    <td>principal.gpwashim@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>5</td>
+    <td>1011</td>
+    <td>DR.DHAMMAPAL NARAYAN SHINGADE</td>
+    <td>Government Polytechnic, Yavatmal</td>
+    <td>principal.gpyavatmal@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>6</td>
+    <td>1015</td>
+    <td>SHRI. PRADEEP MULCHAND BHANSALI</td>
+    <td>Government Polytechnic , Achalpur</td>
+    <td>principal.gpachalpur@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>Aurangabad</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>7</td>
+    <td>2010</td>
+    <td>Prof. F. A. KHAN</td>
+    <td>Government Polytechnic, Aurangabad</td>
+    <td>principal.gpaurangabad@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>8</td>
+    <td>2011</td>
+    <td>SHRI. M.R. LOHAKARE</td>
+    <td>Government Polytechnic, Beed</td>
+    <td>principal.gpbeed@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>9</td>
+    <td>2012</td>
+    <td>Dr. R.K. Patil</td>
+    <td>Government Polytechnic, Hingoli</td>
+    <td>principal.gphingoli@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>10</td>
+    <td>2013</td>
+    <td>Dr. A.M. Jinturkar</td>
+    <td>Government Polytechnic, Ambad</td>
+    <td>principal.gpambad@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>11</td>
+    <td>2014</td>
+    <td>Shri. S.R.Navale</td>
+    <td>Government Polytechnic, Jalna</td>
+    <td>principal.gpjalna@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>12</td>
+    <td>2015</td>
+    <td>Dr. K.M. Bakwad</td>
+    <td>Puranmal Lahoti  Government Polytechnic, Latur</td>
+    <td>principal.plgplatur@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>13</td>
+    <td>2016</td>
+    <td>Dr. A.M. AGARKAR</td>
+    <td>Government  Residential Women's Polytechnic, Latur</td>
+    <td>principal.grwplatur@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>14</td>
+    <td>2017</td>
+    <td>Dr. G.V. GARJE</td>
+    <td>Government Polytechnic, Nanded</td>
+    <td>principal.gpnanded@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>15</td>
+    <td>2018</td>
+    <td>Dr.Y.V.Chavan</td>
+    <td>Government Polytechnic, Osmanabad</td>
+    <td>principal.gposmanabad@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>16</td>
+    <td>2019</td>
+    <td>Dr. K.B. LADHANE</td>
+    <td>Government Polytechnic, Jintur</td>
+    <td>principal.gpjintur@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>Mumbai</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>17</td>
+    <td>3006</td>
+    <td>Amravati</td>
+    <td>Government Institute of Printing Technology, Mumbai</td>
+    <td>principal.giptmumbai@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>18</td>
+    <td>3007</td>
+    <td>Smt. Swati D. Deshpande</td>
+    <td>Government Polytechnic, Mumbai</td>
+    <td>principal.gpmumbai@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>19</td>
+    <td>3008</td>
+    <td>Shri. Sunil Bhamre</td>
+    <td>Government Polytechnic, Pen</td>
+    <td>principal.gppen@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>20</td>
+    <td>3009</td>
+    <td>Shri. G.C.Khursade</td>
+    <td>Government Polytechnic, Ratnagiri</td>
+    <td>principal.gpratnagiri@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>21</td>
+    <td>3010</td>
+    <td>Shri. Suresh A.Patil</td>
+    <td>Government Polytechnic, Malvan</td>
+    <td>principal.gpmalvan@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>22</td>
+    <td>3011</td>
+    <td>Shri. Nitiket N. Mhala </td>
+    <td>Government Polytechnic, Thane</td>
+    <td>principal.gpthane@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>23</td>
+    <td>3013</td>
+    <td>Shri. Atul B. Borade</td>
+    <td>Government Polytechnic, Vikramgad</td>
+    <td>principal.gpvikramgad@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>Nagpur</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>24</td>
+    <td>4008</td>
+    <td>DR. ASHOK UPADHYAY</td>
+    <td>Government Polytechnic, Sakoli</td>
+    <td>principal.gpsakoli@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>25</td>
+    <td>4009</td>
+    <td>SHRI. M. B. DAIGAVANE</td>
+    <td>Government Polytechnic, Bramhapuri</td>
+    <td>principal.gpbramhapuri@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>26</td>
+    <td>4010</td>
+    <td>DR. N. P. SONAJE</td>
+    <td>Government Polytechnic, Gadchiroli</td>
+    <td>principal.gpgadchiroli@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>27</td>
+    <td>4011</td>
+    <td>SHRI C. D. GOLGHATE</td>
+    <td>Government Polytechnic Gondia</td>
+    <td>principal.gpgondia@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>28</td>
+    <td>4012</td>
+    <td>C. S. THORAT</td>
+    <td>Government Polytechnic, Sadar, Nagpur</td>
+    <td>principal.gpnagpur@dtemaharashtra.gov</td>
+  </tr>
+   <tr>
+    <td>29</td>
+    <td>4013</td>
+    <td>S. R. THUTE</td>
+    <td>Government Polytechnic, Arvi</td>
+    <td>principal.gparvi@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>30</td>
+    <td>4022</td>
+    <td>DR. C. S. THORAT</td>
+    <td>Government Institute of Hotel Management & Catering Technology, Nagpur</td>
+    <td>principal.gihmctnagpur@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>Nashik</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>31</td>
+    <td>5006</td>
+    <td>Shri. Mukund Sharadchandra Satarkar</td>
+    <td>Government Polytechnic, Ahmednagar</td>
+    <td>principal.gpahmednagar@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>32</td>
+    <td>5007</td>
+    <td>Dr. Raju Govindrao Wadekar</td>
+    <td>Government Polytechnic, Dhule</td>
+    <td>principal.gpdhule@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>33</td>
+    <td>5008</td>
+    <td>Shri. Mahendra Vishwanath Ingale</td>
+    <td>Government Polytechnic, Jalgaon</td>
+    <td>principal.gpjalgaon@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>34</td>
+    <td>5009</td>
+    <td>Dr. Sanjay Arjunsingh Pardeshi</td>
+    <td>Government Polytechnic, Nandurbar</td>
+    <td>principal.gpnandurbar@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>35</td>
+    <td>5010</td>
+    <td>Shri. Dnyandeo Pundalikral Nathe</td>
+    <td>Government Polytechnic, Nashik</td>
+    <td>principal.gpnashik@dtemaharashtra.gov.in</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>Pune</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+   <tr>
+    <td>36</td>
+    <td>6010</td>
+    <td>Prashant Rajendra Pattalwar</td>
+    <td>Government Polytechnic, Kolhapur
+</td>
+    <td>principal.gpkolhapur@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>37</td>
+    <td>6011</td>
+    <td>Mr. S.R. Kerkal</td>
+    <td>Government Polytechnic, Awasari (Khurd)</td>
+    <td>principal.gpavasari@dtemaharashtra.gov.in
+</td>
+  </tr>
+   <tr>
+    <td>38</td>
+    <td>6013</td>
+    <td>Dr. D.R.Nandanwar</td>
+    <td>Government Polytechnic, Pune</td>
+    <td>principal.gppune@dtemaharashtra.gov.in
+</td>
+  </tr>
+   <tr>
+    <td>39</td>
+    <td>6014</td>
+    <td>Smt. S.V. Bane</td>
+    <td>Government Residence Women Polytechnic, Tasgaon </td>
+    <td>principal.grwptasgaon@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>40</td>
+    <td>6015</td>
+    <td>Nilesh Gopalrao Deshmukh</td>
+    <td>Government Polytechnic, Miraj</td>
+    <td>principal.gpmiraj@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>41</td>
+    <td>6016</td>
+    <td>Dr. Vitthal Bandal</td>
+    <td>Government Polytechnic, Karad</td>
+    <td>principal.gpkarad@dtemaharashtra.gov.in</td>
+  </tr>
+   <tr>
+    <td>42</td>
+    <td>6017</td>
+    <td>Dr. Mahendra Chitlange</td>
+    <td>Government Polytechnic, Solapur</td>
+    <td>principal.gpsolapur@dtemaharashtra.gov.in</td>
+  </tr>
+
+</table>
+
+</div>
+</section>
+{% endblock %}

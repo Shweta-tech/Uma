@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+ {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gr.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+ {% endblock %}   
+
+<section class="deal-of-week set-bg spad" >
+ <div class="deal">
+  <!-- <div class="row mt-5"> -->
+
+
+<h1 text-align="center">Analysis of Infrastructure for Energized Irrigation (AIEI) in Maharashtra</h1>
+
+<br><h3 text-align="center">Project Description</h3>
+
+<p>Analysis of Infrastructure for Energized Irrigation (AIEI) in Maharashtra: This training programme was conceptualised by Unnat Maharashtra Abhiyan (UMA) Program Cell and Centre for Technology Alternatives for Rural Areas (CTARA) to engage teachers and students of UMA recognised engineering colleges to help in monitoring and evaluation of electricity supply in power grid.</p>
+
+<h3 text-align="center">Principal Investigator</h3>
+
+<p>DTE, Government of Maharashtra and CTARA, IIT Bombay</p>
+
+<h3 text-align="center">Team</h3>
+
+<p>A] Lead Faculty Coordinator <br><br>Prof. Priya Jadhav, CTARA <br>
+<br>B] UMA Team <br>
+<br>Mr. Rajaram Desai, UMA Program Cell Lead, CTARA <br>
+<br>Ms. Oshin Dharap, UMA Program Cell, CTARA <br>
+<br>C] DTE Representative <br>
+<br>Mr. SP Shiralkar, OSD <br>
+<br>D] Resource Persons <br>
+<br>Mr. Jitendra Shah, CTARA <br>
+<br>Ms. Athira Panicker, CTARA <br>
+<br>Mr. Prathamesh Antarkar, CTARA <br>
+<br>Mr. Deepak Karwa, CTARA <br>
+<br>E] Coordination <br>
+<br>Mr. Prashant Ambad, MIT <br>
+<br>Mr. Nihit Agrawal, MIT <br> </p>
+
+<h3 text-align="center">Project Photo</h3>
+<img src="{% static 'img/aiei1.JPG' %}" alt="" style="width:30%;">
+<img src="{% static 'img/aiei.JPG' %}" alt="" style="width:30%;">
+
+<h3 text-align="center">Project Deliverables</h3>
+<p><br>1-Completion of assignment by visiting distribution transformer in the vicinity preferably in the taluka/district.<br>
+<br>2-Plotting a LT network with Agri feeder using techniques displayed in first workshop of Analysis of Infrastructure for Energized Irrigation<br> <br>3-All participating colleges to display their findings to other participants and their reports would be evaluated on the basis of answering the questions and the activities performed as per the assignment given<br> </p>
+
+<h3 text-align="center">Project Documents</h3>
+<p>Important GRs <a href="https://www.iitb.ac.in/ctara/en/ctara/tdsc/gov_res">link</a></p>
+
+<h3 text-align="center">Project Documents <a href="https://www.iitb.ac.in/ctara/en/rws_model_DPR">link</a></h3><br>
+
+<h3 text-align="center">Project Outputs</h3>
+<h5 text-align="center">First Workshop - Analysis of Infrastructure for Energized Irrigation (AIEI) in Maharashtra at MIT Aurangabad, 27-28 January, 2020</h5>
+  
+  <p>Successfully completed a 2 day workshop focused on training the participants to use advanced concepts and practices to plan, design and carry out monitoring and evaluation of electricity supply grid for farm irrigation. Also to facilitate the trainees to apply learning from the training for performance assessment (evaluation) of existing electricity supply grid in assigned district and identify concrete interventions for improvement for ensuring sustainability of the system. A total of 46 participants/trainees (23 faculty members and 23 students), representing 12 engineering colleges spread across Maharashtra were selected for the training programme. During the workshop, training team introduced analysis of agriculture feeder using Matpower, case studies, templates, mapping the grid using Google Earth and tools for cost benefit analysis of agricultural feeder. A field visit was conducted to 33kV sub-station in Gandheli, Aurangabad and a nearby agricultural feeder. The practical procedure was exhibited in order to take readings from feeder using instruments like Single phase power analyser, which is essential for measuring electricity supply to agricultural pumps. Colleges were asked to visit a sub-station and a agricultural feeder in their district and complete the assignment by evaluating the grid from feeder with technical support from CTARA by next month (Jan-Mar 2020).</p>
+
+ <!-- <h3 text-align="center">Programme Agenda <a href="https://www.iitb.ac.in/ctara/en/system/files/Programme%20Agenda.pdf#overlay-context=user">link</a></h3> -->
+
+  <div class="faq-section spad">
+             <div class="faq-accordin">
+                     <div class="accordion" id="accordionExample">
+                            <h3>Program Agenda</h3><br>
+                            
+                            {% for block in page.content %}
+                                {% include_block block %}
+                            {% endfor %}
+                     </div>
+             </div>
+   </div>                        
+
+
+ 
+<!--  <img src="{% static 'img/aieiagenda/1.png' %}" alt="" style="width:30%">
+ <img src="{% static 'img/aieiagenda/2.png' %}" alt="" style="width:30%, height:60%"><br> -->
+
+ <h3 text-align="center">Participant list  <a href="https://www.iitb.ac.in/ctara/en/system/files/Participants%20List.pdf#overlay-context=user">link</a></h3><br>
+
+<!--  <img src="{% static 'img/aieiagenda/3.png' %}" alt="" style="width:30%, height:50%">
+ <img src="{% static 'img/aieiagenda/4.png' %}" alt="" style="width:30%">
+ <img src="{% static 'img/aieiagenda/5.png' %}" alt="" style="width:30%"><br> -->
+
+ <br><h3 text-align="center">Training Report  <a href="https://www.iitb.ac.in/ctara/en/system/files/Training%20Report.pdf#overlay-context=en/uma_rws_audit_training">link</a></h3><br>
+
+ <h5><a href="https://drive.google.com/file/d/1bClsMmrivG3Z3sH8HCJwWULPlFXHtdcs/view?usp=sharin">https://drive.google.com/file/d/1bClsMmrivG3Z3sH8HCJwWULPlFXHtdcs/view?usp=sharin</a></h5>
+
+ <br><h3 text-align="center">Workshop Session <a href="https://www.dropbox.com/sh/6ngfc1nb0nu03ou/AACc2tozr1XDPGR0gMV5k9v7a?dl=0">link</a></h3>
+</div>
+<!-- </div> -->
+</section>
+
+
+    {% block extra_js %}
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    {% endblock %} 
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

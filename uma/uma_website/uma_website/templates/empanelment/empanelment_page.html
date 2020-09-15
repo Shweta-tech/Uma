@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+
+
+{% block content %}
+    {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gr.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+
+ <style>
+.center {
+  text-align: left;
+  /*border: 3px solid green;*/
+}
+
+.h2 {
+    		color : #000000;
+    	}
+</style>
+
+{% endblock %}
+
+<section class="deal-of-week set-bg spad" >
+ <div class="deal">
+
+<h3 style="text-align: center; padding-bottom: 0%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; color: #85144b;">{{ self.subtitle }}</b></h3><br><br>
+
+
+
+<div class="center" style="background-color:#bbb;">
+    <h2>Three Stage Empanelment Process and Timeline</h2><br>
+    
+    <h5>Following a meeting of select private engineering colleges on 28 th December 2016,
+applications for UMA empanelment were received from 18 colleges. The process followed is
+as follows-</h5><br>
+
+    <p>1. Stage I: 23rd to 29th Jan - The UMA Review Committee (Mr. Raj Desai, Mr. Yatin
+Diwakar and Ms. Oshin Dharap) scrutinized and scored the 18 applications received based on
+parameters such as experience in the development sector, experience in executing projects of
+inter-disciplinary nature, fieldwork and reporting, availability of seed funding to start T&amp;DC,
+willingness to commit faculty time, etc. A cut-off score was decided upon and 14 colleges
+were shortlisted.<br>
+<br>2. Stage II: 8th Feb to 13th Mar- The UMA team consisting of Mr. Raj Desai and Ms.
+Oshin Dharap visited 14 applicant colleges to assess their technical capabilities to conduct
+UMA activities (in terms of work done in the development sector as well as existing
+infrastructural facilities) and review supporting documents (project reports, agreements,
+MoUs, certificates, etc.). Each college was requested to send contact details of key
+professors who have done UMA related work as well as a brief presentation containing the
+synopsis/abstract and pictures of 6-7 key projects which were found relevant by the UMA
+team. The UMA team prepared a UMA summary visit report for each college.<br>
+<br>3. Stage III: 24 th May- The UMA Advisory Committee held its second meeting on 24 th May
+2017. The 14 college presentations and summary visit reports were put before the UMA
+Advisory Committee for approval. Based on this, the UMA Advisory Committee decided to
+approve the 12 recommended institutions for empanelment. Subsequent to this, a new GR
+enlisting the empaneled colleges and empowering them to participate in UMA projects and
+activities was released on 5 th July.<br></p>
+</div>
+
+</div>
+</section>
+
+{% endblock %}
